@@ -17,5 +17,9 @@ public class PlatformController : MonoBehaviour
     {
         transform.Translate(Vector3.forward * Time.deltaTime);
         transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
+        if (transform.position.x < -20.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
