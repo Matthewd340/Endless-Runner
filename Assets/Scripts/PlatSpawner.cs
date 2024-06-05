@@ -7,8 +7,8 @@ public class PlatSpawner : MonoBehaviour
     public GameObject platformPrefab;
     PlatformController platformScript;
 
-    float minY = -2.0f;
-    float maxY = 2.0f;
+    float minY = -3.0f;
+    float maxY = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,6 @@ public class PlatSpawner : MonoBehaviour
 
     void SpawnPlatforms()
     {
-        Instantiate(platformPrefab, new Vector2(4.5f,Random.Range(minY,maxY)), Quaternion.identity);
+        Instantiate(platformPrefab, new Vector2(6.5f,Random.Range(minY,maxY)), Quaternion.identity);
     }
 }
